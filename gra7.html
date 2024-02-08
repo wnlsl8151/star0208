@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>차량견적</title>
+    
+    <!-- 필요 CDN -->
+    <meta name="viewport" content="target-densitydpi=medium-dpi, width=360">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/gasang-head.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/media-about.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    
+</head>
+<body>
+
+    <!-- 헤더부분은 건들지 말 것 -->
+    <h1>(주)스타리무진</h1>
+    <header id="header">
+        <!-- 데스크탑 -->
+        <div class="desk">
+            <div class="logo">
+                <img src="./img/스타리무진 로고 앰블럼.png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">홈</a></li>
+                <li><a href="./about.html">회사소개</a></li>
+                <li><a href="./model.html">모델</a></li>
+                <li><a href="./index3.html">커스텀</a></li>
+                <li><a href="./prs9.html">가상견적</a></li>
+                <li><a href="https://www.youtube.com/@Starlm/videos" target="_blank">유튜브</a></li>
+                <li><a href="./gallery.html">갤러리</a></li>
+                <li><a href="./go.html">고객지원</a></li>
+                    <li>
+                        <div class="search-container">
+                            <label>
+                          <input type="text" class="top-sch" style="background-color: inherit; color: #fff;">
+                        </label>
+                        </div>
+                      </li>
+                </ul>
+                <h2>
+                    The One and Only Carnival Hi Limousine
+                </h2>
+            </nav>
+            <div class="origin">
+                <img src="./img/origin.png" alt="">
+            </div>
+            <div class="phone">
+                <img src="./img/phone.png" alt="">
+                <p>1588-8216</p>
+            </div>
+        </div>
+
+        <!-- 모바일 헤더 -->
+        <div class="mobile">
+            <div class="logoM">
+                <img src="./img2/logo_gold.png" alt="">
+            </div>
+            <!-- <h2>The One and Only Carnival Hi Limousine</h2> -->
+            <div id="navbtn">
+                <img src="./img2/navbtn.png" alt="" onclick="navBtn();">
+            </div>
+            <div id="navbtnC">
+                <img src="./img2/navbtn.png" alt="" onclick="navBtnC();">
+            </div>
+        </div>
+        <nav id="navM">
+            <ul>
+                <li>홈</li>
+                <li>회사소개</li>
+                <li>모델</li>
+                <li>커스텀</li>
+                <li>가상견적</li>
+                <li>유튜브</li>
+                <li>갤러리</li>
+                <li>고객지원</li>
+            </ul>
+        </nav>
+    </header>
+<!-- 헤더 끝 -->
+    
+    <section id="sv1" class="sv">
+        <img src="./images/w_sv.jpg" alt="">
+    </section>
+    <section id="gra7" class="wrap prd">
+        <div class="title">
+            <h2>가상 견적</h2>
+            <p>고객의 취향에 따라 옵션을 선택하여 대략의 구매금액을 추정해 보는 가상견적 프로그램 입니다.<br>
+            실제 최종견적과는 다소 달라질 수 있습니다.</p>
+        </div>
+        
+        <h3>순정 옵션</h3>
+        
+        <ul class="w_cate"> <!--순정카테고리-->
+            <li>
+                <h4>프레스티지</h4>
+                <div class="fl">
+                    <a href="./prs9.html">9인승</a>
+                </div>
+            </li>
+            <li>
+                <h4>노블레스</h4>
+                <div class="fl">
+                    <a href="./nob9.html">9인승</a>
+                    <a href="./nob7.html">7인승</a>
+                </div>
+            </li>
+            <li>
+                <h4>시그니처</h4>
+                <div class="fl">
+                    <a href="./sig9.html">9인승</a>
+                    <a href="./sig7.html">7인승</a>
+                </div>
+            </li>
+            <li class="on">
+                <h4>그래비티</h4>
+                <div class="fl">
+                    <a href="./gra9.html">9인승</a>
+                    <a href="./gra7.html" class="select">7인승</a>
+                </div>
+            </li>
+        </ul>
+        
+       
+        <form method="post" name="myform">
+            <article class="cont1">
+                <h2>엔진</h2>
+                <ul>
+                    <li>
+                        <figure><img src="./images/gra/eg_1.jpg" alt=""></figure>
+                        <div>
+                            <input  id="cont1_1" type="checkbox" value=46630000 onclick="CheckChoice(this);"> 
+                            <label for="cont1_1">스마트스트림 G3.5 GDI 가솔린 엔진</label>    
+                        </div>
+                    </li>
+                    <li>
+                        <figure><img src="./images/gra/eg_2.jpg" alt=""></figure>
+                        <div>
+                            <input  id="cont1_2" type="checkbox" value=48560000 onclick="CheckChoice(this);"> 
+                            <label for="cont1_2">스마트스트림 D2.2 디젤 엔진</label>    
+                        </div>
+                    </li>
+                    <li>
+                        <figure><img src="./images/gra/eg_3.jpg" alt=""></figure>
+                        <div>
+                            <input  id="cont1_3" type="checkbox" value=51130000 onclick="CheckChoice(this);"> 
+                            <label for="cont1_3">스마트스트림 터보 1.6 하이브리드 엔진</label>    
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            
+            <article class="cont2">
+                <h2>외장</h2>
+                <ul>
+                    <li>
+                        <figure><img src="./images/gra/black.png" alt=""></figure>
+                        <div>
+                            <input  id="cont2_1" type="checkbox" value=0 onclick="CheckChoice(this);" > 
+                            <label for="cont2_1">오로라 블랙 펄</label>    
+                        </div>
+                    </li>
+                    <li>
+                        <figure><img src="./images/gra/metal.png" alt=""></figure>
+                        <div>
+                            <input  id="cont2_2" type="checkbox" value=0 onclick="CheckChoice(this);"> 
+                            <label for="cont2_2">판테라 메탈</label>    
+                        </div>
+                    </li>
+                    <li>
+                        <figure><img src="./images/gra/silver.png" alt=""></figure>
+                        <div>
+                            <input  id="cont2_3" type="checkbox" value=0 onclick="CheckChoice(this);"> 
+                            <label for="cont2_3">세라믹 실버</label>    
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            
+            <article class="cont3">
+                <h2>내장</h2>
+                <ul class="color">
+                    <li class="small">
+                        <figure><img src="./images/gra/taupe.png" alt=""></figure>
+                        <div>
+                            <input  id="cont3_1" type="checkbox" value=0 onclick="CheckChoice(this);" > 
+                            <label for="cont3_1">토프</label>    
+                        </div>
+                    </li>
+                    <li class="small">
+                        <figure><img src="./images/gra/baige.png" alt=""></figure>
+                        <div>
+                            <input  id="cont3_2" type="checkbox" value=0 onclick="CheckChoice(this);" > 
+                            <label for="cont3_2">코튼 베이지</label>    
+                        </div>
+                    </li>
+                    <li class="small gray">
+                        <figure><img src="./images/gra/gray.png" alt=""></figure>
+                        <div>
+                            <input  id="cont3_3" type="checkbox" value=0 onclick="CheckChoice(this);" > 
+                            <label for="cont3_3">네이비 그레이</label>    
+                        </div>
+                    </li>
+                    
+                </ul>
+            </article>
+            
+            <article class="cont4">
+                <h2>선택옵션</h2>
+                <ul>
+                    <li>
+                        <figure><img src="./images/gra/comp7.jpg" alt=""></figure>
+                        <div>
+                            <input  id="cont4_1" type="checkbox" value=1190000 onclick="CheckChoice(this);" > 
+                            <label for="cont4_1">컴포트 (7인승, 그래비티)</label>    
+                        </div>
+                    </li>
+                    <li>
+                        <figure><img src="./images/gra/drive.jpg" alt=""></figure>
+                        <div>
+                            <input  id="cont4_1" type="checkbox" value=790000 onclick="CheckChoice(this);" > 
+                            <label for="cont4_1">드라이브 와이즈 (그래비티)</label>    
+                        </div>
+                    </li>
+                    <li>
+                        <figure><img src="./images/gra/hud.jpg" alt=""></figure>
+                        <div>
+                            <input  id="cont4_2" type="checkbox" value=1270000 onclick="CheckChoice(this);" > 
+                            <label for="cont4_2">HUD + 빌트인 캠 2</label>    
+                        </div>
+                    </li>
+                    <li>
+                        <figure><img src="./images/gra/krell.jpg" alt=""></figure>
+                        <div>
+                            <input  id="cont4_6" type="checkbox" value=630000 onclick="CheckChoice(this);" > 
+                            <label for="cont4_6">KRELL 프리미엄 사운드</label>    
+                        </div>
+                    </li>
+                    <li>
+                        <figure><img src="./images/gra/monitor.jpg" alt=""></figure>
+                        <div>
+                            <input  id="cont4_3" type="checkbox" value=1270000 onclick="CheckChoice(this);" > 
+                            <label for="cont4_3">모니터링 팩 (그래비티)</label>    
+                        </div>
+                    </li>
+                    <li>
+                        <figure><img src="./images/gra/conn.jpg" alt=""></figure>
+                        <div>
+                            <input  id="cont4_4" type="checkbox" value=1110000 onclick="CheckChoice(this);" > 
+                            <label for="cont4_4">스마트커넥트</label>    
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            
+            
+            <article class="cont101">
+                <h2>마이컴포트 패키지</h2>
+                <ul>
+                    <li>
+                        <figure><img src="./images/gra/mycomp7.jpg" alt=""></figure>
+                        <div>
+                            <input  id="cont101_1" type="checkbox" value=1330000 onclick="CheckChoice(this);" > 
+                            <label for="cont101_1">빌트인 공기청정기<br>냉·온 컵홀더(1열/2열)</label>    
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            
+            
+            <!-- 커스텀 공통 -->
+            <? include "custom.html" ?>
+            
+        </form>
+    </section>
+
+    <!-- footer부분 시작 -->
+    <footer id="footer" >
+        <div class="footer-txt">
+            <div class="first-footer">
+                <h2>(주)스타리무진</h2>
+                <ul>
+                    <li>회사명:(주)스타리무진</li>
+                    <li>대표자:김민수</li>
+                    <li>주소:인천 서구 백범로 830 3층</li>
+                    <li>이메일:niziume@naver.com</li>
+                    <li>전화번호:1588-8216</li>
+                    <li>팩스번호:032-573-9773</li>
+                    <li>사업자등록번호:614-81-06215</li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                </ul>
+            </div>
+            <div class="last-footer">
+                <h2>바로가기</h2>
+                <ul>
+                    <li>홈</li>
+                    <li>회사소개</li>
+                    <li>모델</li>
+                    <li>커스텀</li>
+                    <li>가상견적</li>
+                    <li>갤러리</li>
+                    <li>고객지원</li>
+                </ul>
+            </div>
+        </div>
+        <div class="txt">
+            <p>ⓒ 2024 Star Limousine INC. All rights reserved</p>
+        </div>
+    </footer>
+    
+    <section id="list">
+        <h1>견적요약</h1>
+        <a href="#none" class="xi-close-thin"></a>
+    </section>
+    
+    <script src="./js/price.js"></script>
+
+
+</body>
+</html>

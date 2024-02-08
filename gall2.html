@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keyword" content="스타리무진, 카니발, 하이리무진, 특장, (주)스타리무진">
+<meta name="description" content="(주)스타리무진">
+<meta name="author" content="(주)스타리무진">
+<meta http-equiv="Subject" content="(주)스타리무진" />
+<meta http-equiv="X-UA-Compatible" content="chrome" />
+<meta http-equiv="Author" content="최진식/이효찬" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta property="og:url" content="도메인 구축 후 설정">
+<meta property="og:title" content="(주)스타리무진">
+<meta property="og:type" content="website">
+<!-- SNS 공유시 보여질 이미지 -->
+<meta property="og:image" content="썸네일이미지">
+<!-- SNS 공유시 보여질 설명 -->
+<meta property="og:description" content="공유시 보여질 설명">
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/font.css">
+<link rel="stylesheet" href="./css/gasang-head.css">
+<link rel="stylesheet" href="./css/footer.css">
+<link rel="stylesheet" href="./css/media-about.css">
+<link rel="stylesheet" href="./css/about.css">
+<link rel="stylesheet" href="./css/gallery.css">
+<!-- <link rel="stylesheet" href="./css/gas.css"> -->
+<script src="./js/cusMain.js"></script>
+<script src="./js/gallery.js"></script>
+<title>(주)스타리무진</title>
+
+<style>
+
+    #sec03 ul{
+        position: relative;
+    }
+
+    #sec03 input{
+        position: absolute;
+    }
+
+    #sec03 .chk1,#sec03 .chk2,#sec03 .chk3{
+        top: 10px;   
+    }
+    
+    #sec03 .chk4,#sec03 .chk5,#sec03 .chk6{
+        top: 245px;
+    }
+
+    #sec03 .chk7,#sec03 .chk8,#sec03 .chk9{
+        top: 480px;
+    }
+
+    #sec03 .chk10,#sec03 .chk11,#sec03 .chk12{
+        top: 715px;
+    }
+    
+    #sec03 .chk13,#sec03 .chk14,#sec03 .chk15{
+        top: 950px;
+    }
+
+    #sec03 .chk1,#sec03 .chk4,#sec03 .chk7,#sec03 .chk10,#sec03 .chk13{
+        left: 10px;
+    }
+
+    #sec03 .chk2,#sec03 .chk5,#sec03 .chk8,#sec03 .chk11,#sec03 .chk14{
+        left: 390px;
+    }
+
+    #sec03 .chk3,#sec03 .chk6,#sec03 .chk9,#sec03 .chk12,#sec03 .chk15{
+        left: 770px;
+    }
+
+    .top-sch{
+        width: 180px;
+    }
+
+    .control1,.control2,.control3,.control4,.control5,.control6,.control7,.control8,.control9,.control10,.control11,.control12,.control13,.control14,.control15{
+        color: #5f5f5f;
+    }
+
+    #img-01,#img-02,#img-03,#img-04,#img-05,#img-06,#img-07,#img-08,#img-09,#img-10,#img-11,#img-12,#img-13,#img-14,#img-15{
+        display: none;
+    }
+
+    .popup{
+        position: fixed;
+    }
+
+    #prev p{
+        position: absolute;
+        top: 330px;
+        left: 30px;
+        font-size: 36px;
+    }
+
+    #next p{
+        position: absolute;
+        right: 30px;
+        top: 330px;
+        font-size: 36px;
+    }
+
+    .control2,.control3,.control4,.control5,.control6,.control7,.control8,.control9,.control10,.control11,.control12,.control13,.control14,.control15{
+        display: none;
+    }
+
+    #footer{
+        margin-top: 800px;
+    }
+
+    
+</style>
+
+
+</head>
+
+
+
+<body>
+
+    <div id="wrapper">
+        <!-- 헤더부분은 건들지 말 것 -->
+        <h1>(주)스타리무진</h1>
+        <header id="header">
+            <!-- 데스크탑 -->
+            <div class="desk">
+                <div class="logo">
+                    <img src="./img/스타리무진 로고 앰블럼.png" alt="">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="./index.html">홈</a></li>
+                    <li><a href="./about.html">회사소개</a></li>
+                    <li><a href="./model.html">모델</a></li>
+                    <li><a href="./index3.html">커스텀</a></li>
+                    <li><a href="./prs9.html">가상견적</a></li>
+                    <li><a href="https://www.youtube.com/@Starlm/videos" target="_blank">유튜브</a></li>
+                    <li><a href="./gallery.html">갤러리</a></li>
+                    <li><a href="./go.html">고객지원</a></li>
+                        <li>
+                            <div class="search-container">
+                                <label>
+                                    <input type="text" class="top-sch" style="background-color: inherit; color: #fff; width: 180px;">
+                            </label>
+                            </div>
+                          </li>
+                    </ul>
+                    <h2>
+                        The One and Only Carnival Hi Limousine
+                    </h2>
+                </nav>
+                <div class="origin">
+                    <img src="./img/origin.png" alt="">
+                </div>
+                <div class="phone">
+                    <img src="./img/phone.png" alt="">
+                    <p>1588-8216</p>
+                </div>
+            </div>
+
+            <!-- 모바일 헤더 -->
+            <div class="mobile">
+                <div class="logoM">
+                    <img src="./img/logo_gold.png" alt="">
+                </div>
+                <!-- <h2>The One and Only Carnival Hi Limousine</h2> -->
+                <div id="navbtn">
+                    <img src="./img/navbtn.png" alt="" onclick="navBtn();">
+                </div>
+                <div id="navbtnC">
+                    <img src="./img/navbtn.png" alt="" onclick="navBtnC();">
+                </div>
+            </div>
+            <nav id="navM">
+                <ul>
+                    <li><a href="./index.html">홈</a></li>
+                    <li><a href="./about.html">회사소개</a></li>
+                    <li><a href="./model.html">모델</a></li>
+                    <li><a href="./custom-main.html">커스텀</a></li>
+                    <li><a href="./gasang-p.html">가상견적</a></li>
+                    <li><a href="https://www.youtube.com/@Starlm/videos">유튜브</a></li>
+                    <li><a href="./gallery.html">갤러리</a></li>
+                    <li><a href="#">고객지원</a></li>
+                </ul>
+            </nav>
+        </header>
+    <!-- 헤더 끝 -->
+
+    <!-- sec01 위쪽 이미지 -->
+
+    <section id="sec01">
+        <div class="img-box">
+            <img src="./img2/slide07.png" alt="">
+        </div>
+        <h2 class="h2txt">
+            Gallery
+        </h2>
+    </section>
+
+    <!-- dropdown menu bar -->
+    <section id="sec02">
+        <ul class="menu">
+            <li>
+                <a href="#" class="top-menu">
+                    <img src="./img/navbtn.png" alt="" style="width: 13px; height: 13px; margin-top: 14px; margin-right: 10px;">
+                    <p style="color: #fff; margin-left: 0;">갤러리 메뉴</p>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#">최근 갤러리</a></li>
+                    <li><a href="#">모든 갤러리</a></li>
+                    <li class="category">
+                        <!-- <h2 id="open">인증서 &nbsp; <span onclick="lastOpen()">▼</span></h2>
+                        <h2 id="close">인증서 &nbsp; <span onclick="lastClose()">▲</span></h2> -->
+                        <li>
+                            <a href="#">카테고리 <span id="ctgr">▼</span></a>
+                            <ul class="subsubmenu">
+                                <li><a href="#">차박</a></li>
+                                <li><a href="#">디오리진</a></li>
+                                <li><a href="#">뉴스</a></li>
+                            </ul>
+                        </li>
+                    </li>
+                    
+                    
+                    
+                </ul>
+            </li>
+        </ul>
+        <div class="share">
+            <img src="./img2/share-icon.png" alt="">
+        </div>
+        <div class="down">
+            <div id="all-down">
+                <img src="./img2/down.png" alt="">
+                <p>전체 다운로드</p>
+            </div>
+            <div id="select-down">
+                <img src="./img2/down.png" alt="">
+                <p>선택 다운로드</p>
+            </div>
+        </div>
+    </section>
+
+        <section id="sec03">
+            <!-- <h2 id="open">Gallery &nbsp;&nbsp;&nbsp; <span onclick="lastOpen()">▼</span></h2>
+            <h2 id="close">Gallery &nbsp;&nbsp;&nbsp; <span onclick="lastClose()">▲</span></h2> -->
+            <!-- <div id="last-img01">
+
+                
+                img popup trial
+                <img src="./img/About1.png" width="295px" height="295px" title="클릭하시면 원본크기로 보실 수 있습니다."
+                style="cursor: pointer;" onclick="doImgPop('./img/About1.png')"  />
+                <img src="./img/About2.png" width="295px" height="295px" title="클릭하시면 원본크기로 보실 수 있습니다."
+                style="cursor: pointer;" onclick="doImgPop('./img/About2.png')"  />
+                <img src="./img/About3.png" width="295px" height="295px" title="클릭하시면 원본크기로 보실 수 있습니다."
+                style="cursor: pointer;" onclick="doImgPop('./img/About3.png')"  />
+            </div> -->
+            <h3 style="font-size: 32px; margin-bottom: 20px;">디 오리진</h3>
+            <ul style="cursor: pointer;">
+                <li>
+                    <input type="checkbox" name="" id="" class="chk1">
+                    <img src="./img/noimg.jpg" alt="" onclick="popUp1();">
+                </li>
+                <li>
+                    <input type="checkbox" name="" id=""  class="chk2">
+                    <img src="./img/noimg.jpg" alt="" onclick="popUp2();">
+                </li>
+                <li>
+                    <input type="checkbox" name="" id=""  class="chk3">
+                    <img src="./img/noimg.jpg" alt="" onclick="popUp3();">
+                </li>
+                <li>
+                    <input type="checkbox" name="" id=""  class="chk4">
+                    <img src="./img/noimg.jpg" alt="" onclick="popUp4();">
+                </li>
+                <li>
+                    <input type="checkbox" name="" id=""  class="chk5">
+                    <img src="./img/noimg.jpg" alt="" onclick="popUp5();">
+                </li>
+                <li>
+                    <input type="checkbox" name="" id=""  class="chk6">
+                    <img src="./img/noimg.jpg" alt="" onclick="popUp6();">
+                </li>
+                <li>
+                    <input type="checkbox" name="" id=""  class="chk7">
+                    <img src="./img/noimg.jpg" alt="" onclick="popUp7();">
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="" class="chk8">
+                    <img src="./img/noimg.jpg" alt="" onclick="popUp8();">
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="" class="chk9">
+                    <img src="./img/noimg.jpg" alt="" onclick="popUp9();">
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="" class="chk10">
+                    <img src="./img/noimg.jpg" alt="" onclick="popUp10();">
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="" class="chk11">
+                    <img src="./img/noimg.jpg" alt="" onclick="popUp11();">
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="" class="chk12">
+                    <img src="./img/noimg.jpg" alt="" onclick="popUp12();">
+                </li>
+                <li><input type="checkbox" name="" id="" class="chk13">
+                    <img src="./img/noimg.jpg" alt="" onclick="popUp13();">
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="" class="chk14">
+                    <img src="./img/noimg.jpg" alt="" onclick="popUp14();">
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="" class="chk15">
+                    <img src="./img/noimg.jpg" alt="" onclick="popUp15();">
+                </li>
+            </ul>
+            
+        </section>
+        
+
+        <section id="sec04">
+        <div id="popup">
+
+            <div class="down_btn">
+                <img src="./img2/share-white.png" alt="" class="sw">
+                <img src="./img2/down-white.png" alt="" class="dw">
+             </div>
+    
+            <div class="pop-close">
+                <img src="./img2/x-icon.png" alt="" onclick="popClose()">
+            </div>
+            <div class="pop-img">
+                <div id="img-01">
+                    <img src="./img2/About1.png" alt="">
+                </div>
+                <div id="img-02">
+                    <img src="./img2/About1.png"  alt="">
+                </div>
+                <div id="img-03">
+                    <img src="./img2/About1.png"  alt="">
+                </div>
+                <div id="img-04">
+                    <img src="./img2/About1.png"  alt="">
+                </div>
+                <div id="img-05">
+                    <img src="./img2/About1.png"  alt="">
+                </div>
+                <div id="img-06">
+                    <img src="./img2/About1.png" alt="">
+                </div>
+                <div id="img-07">
+                    <img src="./img2/About1.png" alt="">
+                </div>
+                <div id="img-08">
+                    <img src="./img2/About1.png"  alt="">
+                </div>
+                <div id="img-09">
+                    <img src="./img2/About1.png"  alt="">
+                </div>
+                <div id="img-10">
+                    <img src="./img2/About1.png"  alt="">
+                </div>
+                <div id="img-11">
+                    <img src="./img2/About1.png"  alt="">
+                </div>
+                <div id="img-12">
+                    <img src="./img2/About1.png" alt="">
+                </div>
+                <div id="img-13">
+                    <img src="./img2/About1.png"  alt="">
+                </div>
+                <div id="img-14">
+                    <img src="./img2/About1.png"  alt="">
+                </div>
+                <div id="img-15">
+                    <img src="./img2/About1.png" alt="">
+                </div>
+            </div>
+
+
+            <div class="control1">
+                <div id="prev">
+                    <p>◀</p>
+                </div>
+
+                <div id="next">
+                    <p>▶</p>
+                </div>
+            </div>
+
+            <div class="control2">
+                <div id="prev">
+                    <p>◀</p>
+                </div>
+
+                <div id="next">
+                    <p>▶</p>
+                </div>
+            </div>
+
+            <div class="control3">
+                <div id="prev">
+                    <p>◀</p>
+                </div>
+
+                <div id="next">
+                    <p>▶</p>
+                </div>
+            </div>
+
+            <div class="control4">
+                <div id="prev">
+                    <p>◀</p>
+                </div>
+
+                <div id="next">
+                    <p>▶</p>
+                </div>
+            </div>
+
+            <div class="control5">
+                <div id="prev">
+                    <p>◀</p>
+                </div>
+
+                <div id="next">
+                    <p>▶</p>
+                </div>
+            </div>
+
+            <div class="control6">
+                <div id="prev">
+                    <p>◀</p>
+                </div>
+
+                <div id="next">
+                    <p>▶</p>
+                </div>
+            </div>
+
+            <div class="control7">
+                <div id="prev">
+                    <p>◀</p>
+                </div>
+
+                <div id="next">
+                    <p>▶</p>
+                </div>
+            </div>
+
+            <div class="control8">
+                <div id="prev">
+                    <p>◀</p>
+                </div>
+
+                <div id="next">
+                    <p>▶</p>
+                </div>
+            </div>
+
+            <div class="control9">
+                <div id="prev">
+                    <p>◀</p>
+                </div>
+
+                <div id="next">
+                    <p>▶</p>
+                </div>
+            </div>
+
+            <div class="control10">
+                <div id="prev">
+                    <p>◀</p>
+                </div>
+
+                <div id="next">
+                    <p>▶</p>
+                </div>
+            </div>
+
+            <div class="control11">
+                <div id="prev">
+                    <p>◀</p>
+                </div>
+
+                <div id="next">
+                    <p>▶</p>
+                </div>
+            </div>
+
+            <div class="control12">
+                <div id="prev">
+                    <p>◀</p>
+                </div>
+
+                <div id="next">
+                    <p>▶</p>
+                </div>
+            </div>
+
+            <div class="control13">
+                <div id="prev">
+                    <p>◀</p>
+                </div>
+
+                <div id="next">
+                    <p>▶</p>
+                </div>
+            </div>
+
+            <div class="control14">
+                <div id="prev">
+                    <p>◀</p>
+                </div>
+
+                <div id="next">
+                    <p>▶</p>
+                </div>
+            </div>
+
+            <div class="control15">
+                <div id="prev">
+                    <p>◀</p>
+                </div>
+
+                <div id="next">
+                    <p>▶</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer 시작! -->
+     <!-- footer부분 시작 -->
+     <footer id="footer">
+        <div class="footer-txt">
+            <div class="first-footer">
+                <h2>(주)스타리무진</h2>
+                <ul>
+                    <li>회사명:(주)스타리무진</li>
+                    <li>대표자:김민수</li>
+                    <li>주소:인천 서구 백범로 830 3층</li>
+                    <li>이메일:niziume@naver.com</li>
+                    <li>전화번호:1588-8216</li>
+                    <li>팩스번호:032-573-9773</li>
+                    <li>사업자등록번호:614-81-06215</li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                </ul>
+            </div>
+            <div class="last-footer">
+                <h2>바로가기</h2>
+                <ul>
+                    <li>홈</li>
+                    <li>회사소개</li>
+                    <li>모델</li>
+                    <li>커스텀</li>
+                    <li>가상견적</li>
+                    <li>갤러리</li>
+                    <li>고객지원</li>
+                </ul>
+            </div>
+        </div>
+        <div class="txt">
+            <p>ⓒ 2024 Star Limousine INC. All rights reserved</p>
+        </div>
+    </footer>
+        
+        
+
+    
+</body>
+
+<script src="./js/gallery.js"></script>
+<script>
+    onclick="window.open(this.src)"
+</script>
+</html>
